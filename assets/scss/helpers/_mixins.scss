@@ -1,0 +1,13 @@
+@use "variables" as var;
+
+@mixin product-title {
+  font-size: 4rem;
+}
+
+@mixin product-text {
+  max-width: 400px;
+  color: var.$legend;
+  line-height: 2rem;
+  font-size: 1.3rem;
+  padding: 1.7rem 0;
+}

@@ -1,0 +1,62 @@
+@use "../helpers/variables" as var;
+
+#main {
+  .introduction {
+    &__box {
+      background: url(../img/product-img.png) no-repeat right;
+      padding: 18rem 0;
+      height: 1010px;
+      animation: animatedBackground 1s ease-in-out;
+    }
+
+    span {
+      color: var.$green;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    &__title {
+      font-size: 7rem;
+      padding: 1.5rem 0;
+    }
+
+    &__legend {
+      color: var.$legend;
+      font-size: 1.3rem;
+      width: 500px;
+    }
+
+    &__spec {
+      padding-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 100px;
+
+      &--icons {
+        display: flex;
+        flex-direction: column;
+
+        img {
+          width: 130px;
+        }
+
+        p {
+          margin-top: 0.3rem;
+          color: var.$legend;
+        }
+      }
+    }
+  }
+}
+
+@keyframes animatedBackground {
+  from {
+    opacity: 0;
+    background-position: right 200px;
+  }
+  to {
+    opacity: 1;
+    background-position: right;
+  }
+}

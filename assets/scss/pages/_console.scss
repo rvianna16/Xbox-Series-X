@@ -1,0 +1,202 @@
+@use "../helpers/variables" as var;
+@use "../helpers/mixins";
+
+#main {
+  .console {
+    color: var.$white;
+
+    &__title {
+      padding: 5rem 0;
+      max-width: 800px;
+      margin: auto;
+      font-size: 4rem;
+      text-align: center;
+
+      span {
+        color: var.$green;
+      }
+    }
+
+    &__dreams {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 5rem;
+      background: url(../img/dreams.png);
+      min-height: 750px;
+
+      &__title {
+        @include mixins.product-title;
+        max-width: 450px;
+      }
+
+      &__text {
+        @include mixins.product-text;
+      }
+
+      &__link {
+        text-transform: uppercase;
+        font-weight: bold;
+        color: var.$green;
+        letter-spacing: 0.2rem;
+        transition: 0.5s;
+
+        &:hover {
+          text-shadow: 0 0 20px rgba(155, 240, 11, 0.5);
+        }
+      }
+    }
+
+    &__optimized {
+      display: flex;
+      align-items: center;
+      padding: 0 4rem;
+      background: url(../img/optimized.png);
+      margin: 5rem 0;
+      min-height: 750px;
+
+      &__title {
+        @include mixins.product-title;
+      }
+
+      &__text {
+        @include mixins.product-text;
+      }
+
+      &__games {
+        display: grid;
+        grid-template-areas:
+          "cyberpunk mediumn"
+          "cyberpunk assassins";
+        row-gap: 85px;
+        animation: show-down 1s ease-in-out;
+
+        &--medium {
+          grid-area: mediumn;
+        }
+
+        &--cyberpunk {
+          position: relative;
+          top: 70px;
+          left: 50px;
+          grid-area: cyberpunk;
+          z-index: 2;
+        }
+
+        &--assassins {
+          position: relative;
+          left: -25px;
+          grid-area: assassins;
+        }
+      }
+    }
+
+    &__control {
+      text-align: center;
+      &__title {
+        @include mixins.product-title;
+
+        span {
+          color: var.$green;
+        }
+      }
+
+      &__text {
+        @include mixins.product-text;
+        float: right;
+        text-align: left;
+        width: 380px;
+        margin-right: 8rem;
+      }
+
+      &__grid {
+        display: grid;
+        grid-template-areas:
+          "1 2"
+          "3 4";
+        gap: 15px;
+        padding: 6rem 0;
+
+        img {
+          width: 608px;
+          height: 702px;
+        }
+
+        &--crop {
+          padding-top: 125px;
+          min-width: 550px;
+          min-height: 702px;
+          position: relative;
+          overflow: hidden;
+
+          img {
+            will-change: transform;
+            width: 1200px;
+            object-fit: cover;
+            transition: ease-in-out;
+            transform: translate3d(-51.5%, 0px, 0px);
+            transform-style: preserve-3d;
+          }
+        }
+
+        &--button {
+          position: relative;
+          top: -125px;
+        }
+
+        &--info {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          color: var.$black;
+          text-align: left;
+          overflow: hidden;
+          background: linear-gradient(
+            155.3deg,
+            #92e10b 1.33%,
+            #baff43 46.46%,
+            #588c00 92.54%
+          );
+          min-width: 550px;
+
+          h4 {
+            font-size: 3rem;
+            max-width: 430px;
+          }
+
+          p {
+            font-size: 1.5rem;
+            padding: 2rem 0;
+            font-weight: 600;
+            width: 430px;
+            opacity: 0.6;
+          }
+
+          img {
+            width: 514px;
+            height: 208px;
+            transition: 0.7s;
+
+            &:hover {
+              position: relative;
+              transform: translateX(170px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes show-down {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -200px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

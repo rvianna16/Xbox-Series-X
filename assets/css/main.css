@@ -13,7 +13,7 @@
 }
 
 body {
-  background-color: #0C0C0C;
+  background-color: #0c0c0c;
   font-family: "Inter", sans-serif;
 }
 
@@ -27,7 +27,7 @@ h1 {
 }
 
 #header {
-  padding: 2rem 0;
+  padding: 2.3rem 0;
 }
 #header .header__content {
   display: flex;
@@ -49,18 +49,18 @@ h1 {
   transition: 0.5s;
 }
 #header .header__content .header__menu .menu__list .menu__item--link:hover {
-  color: #9BF00B;
-  box-shadow: 0 0 5px 0 rgba(155, 240, 11, 0.2);
+  color: #9bf00b;
+  text-shadow: 0 0 20px rgba(155, 240, 11, 0.5);
 }
 #header .header__content .header__menu .menu__list .menu__item--btn {
   padding: 15px 30px;
   border-radius: 0.2rem;
   margin-left: 12rem;
-  background-color: #9BF00B;
-  color: #0C0C0C;
+  background-color: #9bf00b;
+  color: #0c0c0c;
 }
 #header .header__content .header__menu .menu__list .menu__item--btn:hover {
-  color: #0C0C0C;
+  color: #0c0c0c;
   background-color: #a5fa15;
   box-shadow: 0 0 20px 0 rgba(155, 240, 11, 0.5);
 }
@@ -96,8 +96,8 @@ h1 {
   #header .header__content .header__menu .menu__list {
     display: block;
     position: absolute;
-    background: #0C0C0C;
-    top: 90px;
+    background: #0c0c0c;
+    top: 100px;
     left: 0;
     visibility: hidden;
     overflow-y: hidden;
@@ -132,6 +132,228 @@ h1 {
 @media only screen and (max-width: 768px) {
   #header .header__content img {
     width: 110px;
+  }
+}
+
+#main .introduction__box {
+  background: url(../img/product-img.png) no-repeat right;
+  padding: 18rem 0;
+  height: 1010px;
+  animation: animatedBackground 1s ease-in-out;
+}
+#main .introduction span {
+  color: #9bf00b;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#main .introduction__title {
+  font-size: 7rem;
+  padding: 1.5rem 0;
+}
+#main .introduction__legend {
+  color: #818181;
+  font-size: 1.3rem;
+  width: 500px;
+}
+#main .introduction__spec {
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+#main .introduction__spec--icons {
+  display: flex;
+  flex-direction: column;
+}
+#main .introduction__spec--icons img {
+  width: 130px;
+}
+#main .introduction__spec--icons p {
+  margin-top: 0.3rem;
+  color: #818181;
+}
+
+@keyframes animatedBackground {
+  from {
+    opacity: 0;
+    background-position: right 200px;
+  }
+  to {
+    opacity: 1;
+    background-position: right;
+  }
+}
+#main .console {
+  color: #fff;
+}
+#main .console__title {
+  padding: 5rem 0;
+  max-width: 800px;
+  margin: auto;
+  font-size: 4rem;
+  text-align: center;
+}
+#main .console__title span {
+  color: #9bf00b;
+}
+#main .console__dreams {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 5rem;
+  background: url(../img/dreams.png);
+  min-height: 750px;
+}
+#main .console__dreams__title {
+  font-size: 4rem;
+  max-width: 450px;
+}
+#main .console__dreams__text {
+  max-width: 400px;
+  color: #818181;
+  line-height: 2rem;
+  font-size: 1.3rem;
+  padding: 1.7rem 0;
+}
+#main .console__dreams__link {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #9bf00b;
+  letter-spacing: 0.2rem;
+  transition: 0.5s;
+}
+#main .console__dreams__link:hover {
+  text-shadow: 0 0 20px rgba(155, 240, 11, 0.5);
+}
+#main .console__optimized {
+  display: flex;
+  align-items: center;
+  padding: 0 4rem;
+  background: url(../img/optimized.png);
+  margin: 5rem 0;
+  min-height: 750px;
+}
+#main .console__optimized__title {
+  font-size: 4rem;
+}
+#main .console__optimized__text {
+  max-width: 400px;
+  color: #818181;
+  line-height: 2rem;
+  font-size: 1.3rem;
+  padding: 1.7rem 0;
+}
+#main .console__optimized__games {
+  display: grid;
+  grid-template-areas: "cyberpunk mediumn" "cyberpunk assassins";
+  row-gap: 85px;
+  animation: show-down 1s ease-in-out;
+}
+#main .console__optimized__games--medium {
+  grid-area: mediumn;
+}
+#main .console__optimized__games--cyberpunk {
+  position: relative;
+  top: 70px;
+  left: 50px;
+  grid-area: cyberpunk;
+  z-index: 2;
+}
+#main .console__optimized__games--assassins {
+  position: relative;
+  left: -25px;
+  grid-area: assassins;
+}
+#main .console__control {
+  text-align: center;
+}
+#main .console__control__title {
+  font-size: 4rem;
+}
+#main .console__control__title span {
+  color: #9bf00b;
+}
+#main .console__control__text {
+  max-width: 400px;
+  color: #818181;
+  line-height: 2rem;
+  font-size: 1.3rem;
+  padding: 1.7rem 0;
+  float: right;
+  text-align: left;
+  width: 380px;
+  margin-right: 8rem;
+}
+#main .console__control__grid {
+  display: grid;
+  grid-template-areas: "1 2" "3 4";
+  gap: 15px;
+  padding: 6rem 0;
+}
+#main .console__control__grid img {
+  width: 608px;
+  height: 702px;
+}
+#main .console__control__grid--crop {
+  padding-top: 125px;
+  min-width: 550px;
+  min-height: 702px;
+  position: relative;
+  overflow: hidden;
+}
+#main .console__control__grid--crop img {
+  will-change: transform;
+  width: 1200px;
+  object-fit: cover;
+  transition: ease-in-out;
+  transform: translate3d(-51.5%, 0px, 0px);
+  transform-style: preserve-3d;
+}
+#main .console__control__grid--button {
+  position: relative;
+  top: -125px;
+}
+#main .console__control__grid--info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #0c0c0c;
+  text-align: left;
+  overflow: hidden;
+  background: linear-gradient(155.3deg, #92e10b 1.33%, #baff43 46.46%, #588c00 92.54%);
+  min-width: 550px;
+}
+#main .console__control__grid--info h4 {
+  font-size: 3rem;
+  max-width: 430px;
+}
+#main .console__control__grid--info p {
+  font-size: 1.5rem;
+  padding: 2rem 0;
+  font-weight: 600;
+  width: 430px;
+  opacity: 0.6;
+}
+#main .console__control__grid--info img {
+  width: 514px;
+  height: 208px;
+  transition: 0.7s;
+}
+#main .console__control__grid--info img:hover {
+  position: relative;
+  transform: translateX(170px);
+}
+
+@keyframes show-down {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -200px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
 

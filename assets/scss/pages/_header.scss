@@ -1,7 +1,7 @@
 @use "../helpers/variables" as var;
 
 #header {
-  padding: 2rem 0;
+  padding: 2.3rem 0;
 
   .header__content {
     display: flex;
@@ -27,7 +27,7 @@
 
             &:hover {
               color: var.$green;
-              box-shadow: 0 0 5px 0 rgba(155, 240, 11, 0.2);
+              text-shadow: 0 0 20px rgba(155, 240, 11, 0.5);
             }
           }
 
@@ -85,7 +85,7 @@
           display: block;
           position: absolute;
           background: var.$black;
-          top: 90px;
+          top: 100px;
           left: 0;
           visibility: hidden;
           overflow-y: hidden;
