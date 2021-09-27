@@ -1,0 +1,136 @@
+@use "../helpers/variables" as var;
+
+#header {
+  padding: 2rem 0;
+
+  .header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .header__menu {
+      #btn-mobile {
+        display: none;
+      }
+
+      .menu__list {
+        display: flex;
+        align-items: center;
+
+        .menu__item {
+          &--link {
+            text-transform: uppercase;
+            margin-left: 2.5rem;
+            color: #fff;
+            font-weight: bold;
+            transition: 0.5s;
+
+            &:hover {
+              color: var.$green;
+              box-shadow: 0 0 5px 0 rgba(155, 240, 11, 0.2);
+            }
+          }
+
+          &--btn {
+            padding: 15px 30px;
+            border-radius: 0.2rem;
+            margin-left: 12rem;
+            background-color: var.$green;
+            color: var.$black;
+
+            &:hover {
+              color: var.$black;
+              background-color: #a5fa15;
+              box-shadow: 0 0 20px 0 rgba(155, 240, 11, 0.5);
+            }
+          }
+
+          @media only screen and (max-width: 1100px) {
+            &--btn {
+              margin-left: 6rem;
+            }
+          }
+
+          @media only screen and (max-width: 990px) {
+            &--btn {
+              margin-left: 3rem;
+            }
+          }
+        }
+      }
+
+      @media only screen and (max-width: 940px) {
+        #btn-mobile {
+          display: block;
+          background: none;
+          border: none;
+          border-top: 3px solid;
+          cursor: pointer;
+          color: var.$white;
+          width: 30px;
+
+          &::after,
+          &::before {
+            content: "";
+            display: block;
+            background: currentColor;
+            margin-top: 7px;
+            width: 30px;
+            height: 3px;
+            transition: 0.3s;
+          }
+        }
+
+        .menu__list {
+          display: block;
+          position: absolute;
+          background: var.$black;
+          top: 90px;
+          left: 0;
+          visibility: hidden;
+          overflow-y: hidden;
+          width: 100%;
+          height: 0;
+          z-index: 100;
+          transition: 0.6s;
+
+          .menu__item {
+            padding: 20px 0;
+            text-align: center;
+
+            &--link,
+            &--btn {
+              margin-left: 0;
+            }
+          }
+        }
+
+        &.active {
+          #btn-mobile {
+            border-top: none;
+
+            &::after {
+              position: relative;
+              top: -10px;
+              transform: rotate(-135deg);
+            }
+            &::before {
+              transform: rotate(135deg);
+            }
+          }
+
+          .menu__list {
+            visibility: visible;
+            height: 350px;
+          }
+        }
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      img {
+        width: 110px;
+      }
+    }
+  }
+}
