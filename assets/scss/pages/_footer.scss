@@ -1,0 +1,70 @@
+@use '../helpers/variables' as var;
+@use '../helpers/mixins';
+
+#footer {
+  padding: 5rem 0;
+  background: #080808;
+  .footer__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .menu {
+      display: flex;
+      align-items: center;
+
+      &__link {
+        opacity: 0.6;
+        text-transform: uppercase;
+        margin-left: 2.5rem;
+        color: var.$white;
+        font-weight: bold;
+        transition: 0.5s;
+
+        &:hover {
+          opacity: 1;
+          color: var.$green;
+          text-shadow: 0 0 20px rgba(155, 240, 11, 0.5);
+        }
+      }
+    }
+  }
+
+  .footer__copy {
+    display: flex;
+    justify-content: space-between;
+    color: var.$white;
+    padding-top: 5rem;
+    opacity: 0.5;
+  }
+
+  @include mixins.for-medium-screen {
+    .footer__content {
+      display: block;
+      text-align: center;
+
+      .menu {
+        display: block;
+
+        &__item {
+          margin: 3rem 0;
+        }
+
+        &__link {
+          margin: 0;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .footer__copy {
+      display: block;
+      text-align: center;
+
+      p {
+        font-size: 16px;
+        padding: 1rem 0;
+      }
+    }
+  }
+}

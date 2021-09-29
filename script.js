@@ -13,6 +13,10 @@ const translateImg = () => {
   const imgCrop = controlContainer.querySelector('[data-image="crop"]');
   const topSize = imgCrop.getBoundingClientRect().top / 16.8;
 
+  if (topSize > 37) {
+    topSize = 37;
+  }
+
   if (windowTop > 3016 && windowTop < 4600) {
     imgCrop.style.transform = `  translate3d(-${topSize + 8}%, 0px, 0px)`;
   }

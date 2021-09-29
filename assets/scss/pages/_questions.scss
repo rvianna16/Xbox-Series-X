@@ -3,14 +3,12 @@
 
 #main {
   .questions {
-    position: relative;
-    top: -5px;
     background: #080808;
     padding: 5rem 0;
 
     &__title {
       @include mixins.section-title;
-      width: 600px;
+      max-width: 600px;
     }
 
     &__list {
@@ -57,6 +55,26 @@
 
         &.active {
           display: block;
+        }
+      }
+    }
+
+    @include mixins.for-tablet {
+      &__list {
+        dt {
+          &::after {
+            top: 5px;
+          }
+        }
+      }
+    }
+
+    @include mixins.for-phone {
+      &__list {
+        dt {
+          &::after {
+            top: 0;
+          }
         }
       }
     }

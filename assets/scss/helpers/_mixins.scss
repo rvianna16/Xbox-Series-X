@@ -9,10 +9,28 @@
   }
 }
 
-@mixin product-text {
+@mixin section-text {
   max-width: 400px;
   color: var.$legend;
   line-height: 2rem;
   font-size: 1.3rem;
   padding: 1.7rem 0;
+}
+
+@mixin for-phone {
+  @media only screen and (max-width: 420px) {
+    @content;
+  }
+}
+
+@mixin for-tablet {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin for-medium-screen {
+  @media only screen and (max-width: 940px) {
+    @content;
+  }
 }

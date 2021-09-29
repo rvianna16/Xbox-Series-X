@@ -1,4 +1,6 @@
 @use '../helpers/variables' as var;
+@use '../helpers/mixins';
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 body {
@@ -9,4 +11,29 @@ body {
 .container {
   margin: auto;
   max-width: min(90vw, 1200px);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+
+  &-track {
+    background: var.$black;
+  }
+
+  &-thumb {
+    background: var.$green;
+    border-radius: 5px;
+  }
+}
+
+@include mixins.for-medium-screen {
+  html {
+    font-size: 14px;
+  }
+}
+
+@include mixins.for-phone {
+  html {
+    font-size: 10px;
+  }
 }

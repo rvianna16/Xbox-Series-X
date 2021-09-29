@@ -22,6 +22,27 @@ body {
   max-width: min(90vw, 1200px);
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0c0c0c;
+}
+::-webkit-scrollbar-thumb {
+  background: #9bf00b;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 940px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  html {
+    font-size: 10px;
+  }
+}
 #header {
   padding: 2.3rem 0;
 }
@@ -38,6 +59,7 @@ body {
   align-items: center;
 }
 #header .header__content #nav .menu__link {
+  font-size: 16px;
   text-transform: uppercase;
   margin-left: 2.5rem;
   color: #fff;
@@ -138,6 +160,7 @@ body {
   animation: animatedBackground 1s ease-in-out;
 }
 #main .introduction__box span {
+  font-size: 16px;
   color: #9bf00b;
   text-transform: uppercase;
   font-weight: 700;
@@ -157,18 +180,45 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 100px;
+  gap: 50px;
 }
 #main .introduction__spec--icons {
   display: flex;
+  align-items: center;
   flex-direction: column;
+  width: 160px;
+  height: 130px;
 }
 #main .introduction__spec--icons img {
-  width: 130px;
+  width: 100px;
+  height: 100px;
 }
 #main .introduction__spec--icons p {
+  text-align: center;
   margin-top: 0.3rem;
   color: #818181;
+}
+@media only screen and (max-width: 940px) {
+  #main .introduction {
+    text-align: center;
+  }
+  #main .introduction__box {
+    background-size: 100vw;
+    background-position: center;
+  }
+  #main .introduction__legend {
+    display: none;
+  }
+  #main .introduction__spec {
+    display: grid;
+    grid-template-areas: "1 2" "3 4";
+  }
+}
+@media only screen and (max-width: 420px) {
+  #main .introduction__box {
+    padding: 8rem 0;
+    height: 550px;
+  }
 }
 
 @keyframes animatedBackground {
@@ -196,12 +246,22 @@ body {
   color: #9bf00b;
 }
 #main .console .dreams {
+  position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding-right: 5rem;
-  background: url(../img/dreams.png);
   min-height: 750px;
+}
+#main .console .dreams::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/dreams.png);
+  z-index: -3;
 }
 #main .console .dreams__title {
   font-size: 4rem;
@@ -219,6 +279,7 @@ body {
   padding: 1.7rem 0;
 }
 #main .console .dreams__link {
+  font-size: 16px;
   text-transform: uppercase;
   font-weight: bold;
   color: #9bf00b;
@@ -231,6 +292,7 @@ body {
 #main .console .optimized {
   display: flex;
   align-items: center;
+  column-gap: 85px;
   padding: 0 4rem;
   background: url(../img/optimized.png);
   margin: 5rem 0;
@@ -253,23 +315,24 @@ body {
 #main .console .optimized__games {
   display: grid;
   grid-template-areas: "cyberpunk mediumn" "cyberpunk assassins";
-  row-gap: 85px;
+  row-gap: 75px;
   animation: show-down 2.5s infinite;
 }
 #main .console .optimized__games--medium {
-  grid-area: mediumn;
+  max-width: 100%;
 }
 #main .console .optimized__games--cyberpunk {
   position: relative;
   top: 70px;
-  left: 50px;
+  left: -50px;
   grid-area: cyberpunk;
+  width: 150%;
   z-index: 2;
 }
 #main .console .optimized__games--assassins {
+  width: 120%;
   position: relative;
   left: -25px;
-  grid-area: assassins;
 }
 #main .console .control {
   position: relative;
@@ -291,7 +354,7 @@ body {
   position: absolute;
   left: 60%;
   text-align: left;
-  width: 380px;
+  width: 340px;
 }
 #main .console .control__grid {
   display: grid;
@@ -309,8 +372,8 @@ body {
   height: 100%;
 }
 #main .console .control__grid--crop {
-  margin-top: 200px;
   position: relative;
+  margin-top: 200px;
 }
 #main .console .control__grid--crop img {
   transform: translate3d(-50.5%, 0px, 0px);
@@ -387,7 +450,7 @@ body {
   text-align: center;
   margin-top: 2rem;
   border-radius: 100%;
-  font-size: 2rem;
+  font-size: 30px;
   width: 40px;
   height: 40px;
 }
@@ -423,10 +486,11 @@ body {
   color: #9bf00b;
 }
 #main .console .price__value {
-  font-size: 2rem;
+  font-size: 2.5rem;
   padding: 1rem 0;
 }
 #main .console .price__text {
+  font-size: 16px;
   color: #9bf00b;
   text-transform: uppercase;
   font-weight: 700;
@@ -445,7 +509,90 @@ body {
   animation: pulse 3s infinite;
 }
 #main .console .price img {
+  position: relative;
+  top: 5px;
   width: 100%;
+}
+@media only screen and (max-width: 940px) {
+  #main .console .dreams {
+    padding: 0;
+  }
+  #main .console .dreams::after {
+    opacity: 0.3;
+  }
+  #main .console .control__text {
+    left: 52%;
+  }
+  #main .console .control__grid--info img:hover {
+    transform: translateX(120px);
+  }
+  #main .console .tech {
+    height: 950px;
+  }
+  #main .console .tech__components {
+    top: -50px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #main .console .dreams {
+    text-align: center;
+  }
+  #main .console .dreams__text {
+    margin: auto;
+  }
+  #main .console .optimized {
+    text-align: center;
+  }
+  #main .console .optimized__games {
+    display: none;
+  }
+  #main .console .control__text {
+    position: initial;
+    text-align: center;
+    margin: auto;
+  }
+  #main .console .control__grid {
+    display: block;
+  }
+  #main .console .control__grid--full, #main .console .control__grid--crop, #main .console .control__grid--button, #main .console .control__grid--info {
+    margin: 1.5rem 0;
+    top: 0;
+  }
+  #main .console .control__grid--crop img {
+    transform: translate3d(-37.5%, 0px, 0px);
+  }
+  #main .console .tech {
+    height: 850px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  #main .console .dreams {
+    min-height: 500px;
+  }
+  #main .console .dreams__text {
+    padding: 2rem;
+  }
+  #main .console .optimized {
+    min-height: 550px;
+  }
+  #main .console .control__grid--full, #main .console .control__grid--crop, #main .console .control__grid--button, #main .console .control__grid--info {
+    height: 500px;
+  }
+  #main .console .control__grid--crop img {
+    transform: translate3d(-27%, 0px, 0px);
+    width: 500px;
+  }
+  #main .console .tech {
+    height: 100%;
+  }
+  #main .console .tech__components {
+    top: 0;
+  }
+  #main .console .tech__components--btn {
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+  }
 }
 
 @keyframes show-down {
@@ -495,15 +642,13 @@ body {
   }
 }
 #main .questions {
-  position: relative;
-  top: -5px;
   background: #080808;
   padding: 5rem 0;
 }
 #main .questions__title {
   font-size: 4rem;
   color: #fff;
-  width: 600px;
+  max-width: 600px;
 }
 #main .questions__title span {
   color: #9bf00b;
@@ -548,6 +693,74 @@ body {
 }
 #main .questions__list dd.active {
   display: block;
+}
+@media only screen and (max-width: 768px) {
+  #main .questions__list dt::after {
+    top: 5px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  #main .questions__list dt::after {
+    top: 0;
+  }
+}
+
+#footer {
+  padding: 5rem 0;
+  background: #080808;
+}
+#footer .footer__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#footer .footer__content .menu {
+  display: flex;
+  align-items: center;
+}
+#footer .footer__content .menu__link {
+  opacity: 0.6;
+  text-transform: uppercase;
+  margin-left: 2.5rem;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.5s;
+}
+#footer .footer__content .menu__link:hover {
+  opacity: 1;
+  color: #9bf00b;
+  text-shadow: 0 0 20px rgba(155, 240, 11, 0.5);
+}
+#footer .footer__copy {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  padding-top: 5rem;
+  opacity: 0.5;
+}
+@media only screen and (max-width: 940px) {
+  #footer .footer__content {
+    display: block;
+    text-align: center;
+  }
+  #footer .footer__content .menu {
+    display: block;
+  }
+  #footer .footer__content .menu__item {
+    margin: 3rem 0;
+  }
+  #footer .footer__content .menu__link {
+    margin: 0;
+    font-size: 16px;
+  }
+  #footer .footer__copy {
+    display: block;
+    text-align: center;
+  }
+  #footer .footer__copy p {
+    font-size: 16px;
+    padding: 1rem 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
