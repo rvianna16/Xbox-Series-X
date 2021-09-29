@@ -194,6 +194,7 @@ body {
   height: 100px;
 }
 #main .introduction__spec--icons p {
+  font-size: 16px;
   text-align: center;
   margin-top: 0.3rem;
   color: #818181;
