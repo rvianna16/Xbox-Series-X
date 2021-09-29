@@ -1,7 +1,12 @@
-@use "variables" as var;
+@use 'variables' as var;
 
-@mixin product-title {
+@mixin section-title {
   font-size: 4rem;
+  color: #fff;
+
+  span {
+    color: var.$green;
+  }
 }
 
 @mixin product-text {

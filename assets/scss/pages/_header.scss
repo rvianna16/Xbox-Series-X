@@ -1,4 +1,4 @@
-@use "../helpers/variables" as var;
+@use '../helpers/variables' as var;
 
 #header {
   padding: 2.3rem 0;
@@ -8,27 +8,25 @@
     align-items: center;
     justify-content: space-between;
 
-    .header__menu {
+    #nav {
       #btn-mobile {
         display: none;
       }
 
-      .menu__list {
+      .menu {
         display: flex;
         align-items: center;
 
-        .menu__item {
-          &--link {
-            text-transform: uppercase;
-            margin-left: 2.5rem;
-            color: #fff;
-            font-weight: bold;
-            transition: 0.5s;
+        &__link {
+          text-transform: uppercase;
+          margin-left: 2.5rem;
+          color: #fff;
+          font-weight: bold;
+          transition: 0.5s;
 
-            &:hover {
-              color: var.$green;
-              text-shadow: 0 0 20px rgba(155, 240, 11, 0.5);
-            }
+          &:hover {
+            color: var.$green;
+            text-shadow: 0 0 20px rgba(155, 240, 11, 0.5);
           }
 
           &--btn {
@@ -71,7 +69,7 @@
 
           &::after,
           &::before {
-            content: "";
+            content: '';
             display: block;
             background: currentColor;
             margin-top: 7px;
@@ -81,7 +79,7 @@
           }
         }
 
-        .menu__list {
+        .menu {
           display: block;
           position: absolute;
           background: var.$black;
@@ -94,11 +92,11 @@
           z-index: 100;
           transition: 0.6s;
 
-          .menu__item {
+          &__item {
             padding: 20px 0;
             text-align: center;
 
-            &--link,
+            &__link,
             &--btn {
               margin-left: 0;
             }
@@ -119,7 +117,7 @@
             }
           }
 
-          .menu__list {
+          .menu {
             visibility: visible;
             height: 350px;
           }

@@ -1,4 +1,4 @@
-@use "../helpers/variables" as var;
+@use '../helpers/variables' as var;
 
 #main {
   .introduction {
@@ -7,17 +7,18 @@
       padding: 18rem 0;
       height: 1010px;
       animation: animatedBackground 1s ease-in-out;
-    }
 
-    span {
-      color: var.$green;
-      text-transform: uppercase;
-      font-weight: 700;
+      span {
+        color: var.$green;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
     }
 
     &__title {
       font-size: 7rem;
       padding: 1.5rem 0;
+      color: var.$white;
     }
 
     &__legend {

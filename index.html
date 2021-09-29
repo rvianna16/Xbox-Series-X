@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
   <title>Xbox Series X</title>
 </head>
 
@@ -13,31 +13,31 @@
   <header id="header">
     <div class="header__content container">
       <img src="assets/img/logo.svg" alt="Xbox Logo" />
-      <nav id="nav" class="header__menu">
+      <nav id="nav">
         <button id="btn-mobile" aria-label="Open menu" aria-haspopup="true" aria-expanded="false"></button>
-        <ul class="menu__list">
+        <ul class="menu">
           <li class="menu__item">
-            <a class="menu__item--link" href="#">Browse</a>
+            <a class="menu__link" href="#">Browse</a>
           </li>
           <li class="menu__item">
-            <a class="menu__item--link" href="#">Games</a>
+            <a class="menu__link" href="#">Games</a>
           </li>
           <li class="menu__item">
-            <a class="menu__item--link" href="#">Controller</a>
+            <a class="menu__link" href="#">Controller</a>
           </li>
           <li class="menu__item">
-            <a class="menu__item--link" href="#">Inside</a>
+            <a class="menu__link" href="#">Inside</a>
           </li>
           <li class="menu__item">
-            <a class="menu__item--link menu__item--btn" href="#">Order console</a>
+            <a class="menu__link menu__link--btn" href="#">Order console</a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="main" class="container">
-    <section class="introduction">
+  <main id="main">
+    <section class="introduction container">
       <div class="introduction__box">
         <span>Completely new</span>
         <h1 class="introduction__title">Xbox Series X</h1>
@@ -65,65 +65,65 @@
         </div>
       </div>
     </section>
-    <section class="console">
+
+    <section class="console container">
       <h2 class="console__title">
         The fastest and the most powerful console xbox for the
         <span>entire history</span>
       </h2>
 
-      <div class="console__dreams">
+      <div class="dreams">
         <div>
-          <h3 class="console__dreams__title">Power you dreams</h3>
-          <p class="console__dreams__text">
+          <h3 class="dreams__title">Power you dreams</h3>
+          <p class="dreams__text">
             From future adventures, to current obsessions, to classic
             titles, thousands of favorites across four generations of Xbox
             look and play best on Xbox Series X.
           </p>
-          <a class="console__dreams__link" href="#">Learn more</a>
+          <a class="dreams__link" href="#">Learn more</a>
         </div>
       </div>
 
-      <div class="console__optimized">
+      <div class="optimized">
         <div>
-          <h3 class="console__optimized__title">Optimized for series X-S</h3>
-          <p class="console__optimized__text">
+          <h3 class="optimized__title">Optimized for series X-S</h3>
+          <p class="optimized__text">
             From future adventures, to current obsessions, to classic
             titles, thousands of favorites across four generations of Xbox
             look and play best on Xbox Series X.
           </p>
         </div>
 
-        <div class="console__optimized__games">
-          <img class="console__optimized__games--medium" src="assets/img/medium-game.png" alt="Medium Game" />
-          <img class="console__optimized__games--cyberpunk" src="assets/img/cyberpunk-game.png"
-            alt="Cyberpunk 2077 Game" />
-          <img class="console__optimized__games--assassins" src="assets/img/assasins-creed-game.png"
+        <div class="optimized__games">
+          <img class="optimized__games--medium" src="assets/img/medium-game.png" alt="Medium Game" />
+          <img class="optimized__games--cyberpunk" src="assets/img/cyberpunk-game.png" alt="Cyberpunk 2077 Game" />
+          <img class="optimized__games--assassins" src="assets/img/assasins-creed-game.png"
             alt="Assassin's Creed Game" />
         </div>
       </div>
 
-      <div class="console__control">
-        <h3 class="console__control__title">Complete <span>control</span></h3>
-        <p class="console__control__text">
+      <div class="control">
+        <h3 class="control__title">Complete <span>control</span></h3>
+        <p class="control__text">
           The new Xbox Wireless Controller brings elegant design, refined
           comfort, and instant sharing to a familiar favorite.
         </p>
 
-        <div class="console__control__grid">
-          <div class="console__control__grid--full">
+        <div class="control__grid">
+          <div class="control__grid--full">
             <img src="assets/img/control.png" alt="Control Xbox" />
           </div>
-          <div class="console__control__grid--crop">
+          <div class="control__grid--crop">
             <img data-image="crop" src="assets/img/crop-control.png" alt="Control xbox" />
           </div>
-          <div class="console__control__grid--button">
+          <div class="control__grid--button">
             <img src="assets/img/control-buttons.png" alt="Button Control xbox" />
           </div>
-          <div class="console__control__grid--info">
-            <h4>
+          <div class="control__grid--info">
+            <h4 class="info__title">
               Compatible with games on Windows 10
             </h4>
-            <p>
+            <p class="info__text">
               The gamepad fully supports Windows 10, you can play all the
               games of this platform and switch easily
             </p>
@@ -132,100 +132,51 @@
         </div>
       </div>
 
+      <div class="tech">
+        <h3 class="tech__title">Technologically <span>perfect</span></h3>
+        <p class="tech__text">The new Xbox Wireless Controller brings elegant design, refined comfort, and instant
+          sharing to a familiar favorite.</p>
+        <div class="tech__components">
+          <img src="assets/img/tech-console.png" alt="Xbox Components">
+          <a class="tech__components--btn tech__components--fan">+</a>
+          <a class="tech__components--btn tech__components--cpu">+</a>
+          <a class="tech__components--btn tech__components--mobo">+</a>
+          <a class="tech__components--btn tech__components--entry">+</a>
+        </div>
+      </div>
+
+      <div class="price">
+        <h3 class="price__title">Xbox series X </h3>
+        <h4 class="price__value">$499.99</h4>
+        <p class="price__text">pre order</p>
+        <div class="price__blur"></div>
+        <img src="assets/img/price-img.png" alt="Sales in November">
+      </div>
     </section>
-    <p class="product__box__text">
-      The new Xbox Wireless Controller brings elegant design, refined comfort,
-      and instant sharing to a familiar favorite.
-    </p>
-    <p class="product__box__text">
-      The new Xbox Wireless Controller brings elegant design, refined comfort,
-      and instant sharing to a familiar favorite.
-    </p>
-    <p class="product__box__text">
-      The new Xbox Wireless Controller brings elegant design, refined comfort,
-      and instant sharing to a familiar favorite.
-    </p>
-    <p class="product__box__text">
-      The new Xbox Wireless Controller brings elegant design, refined comfort,
-      and instant sharing to a familiar favorite.
-    </p>
-    <p class="product__box__text">
-      The new Xbox Wireless Controller brings elegant design, refined comfort,
-      and instant sharing to a familiar favorite.
-    </p>
-    <p class="product__box__text">
-      The new Xbox Wireless Controller brings elegant design, refined comfort,
-      and instant sharing to a familiar favorite.
-    </p>
-    <p class="product__box__text">
-      The new Xbox Wireless Controller brings elegant design, refined comfort,
-      and instant sharing to a familiar favorite.
-    </p>
-    <p class="product__box__text">
-      The new Xbox Wireless Controller brings elegant design, refined comfort,
-      and instant sharing to a familiar favorite.
-    </p>
-    <p class="product__box__text">
-      The new Xbox Wireless Controller brings elegant design, refined comfort,
-      and instant sharing to a familiar favorite.
-    </p>
-    <p class="product__box__text">
-      The new Xbox Wireless Controller brings elegant design, refined comfort,
-      and instant sharing to a familiar favorite.
-    </p>
-    <p class="product__box__text">
-      The new Xbox Wireless Controller brings elegant design, refined comfort,
-      and instant sharing to a familiar favorite.
-    </p>
-    <p class="product__box__text">
-      The new Xbox Wireless Controller brings elegant design, refined comfort,
-      and instant sharing to a familiar favorite.
-    </p>
-    <p class="product__box__text">
-      The new Xbox Wireless Controller brings elegant design, refined comfort,
-      and instant sharing to a familiar favorite.
-    </p>
-    <p class="product__box__text">
-      The new Xbox Wireless Controller brings elegant design, refined comfort,
-      and instant sharing to a familiar favorite.
-    </p>
-    <p class="product__box__text">
-      The new Xbox Wireless Controller brings elegant design, refined comfort,
-      and instant sharing to a familiar favorite.
-    </p>
-    <p class="product__box__text">
-      The new Xbox Wireless Controller brings elegant design, refined comfort,
-      and instant sharing to a familiar favorite.
-    </p>
-    <p class="product__box__text">
-      The new Xbox Wireless Controller brings elegant design, refined comfort,
-      and instant sharing to a familiar favorite.
-    </p>
-    <p class="product__box__text">
-      The new Xbox Wireless Controller brings elegant design, refined comfort,
-      and instant sharing to a familiar favorite.
-    </p>
-    <p class="product__box__text">
-      The new Xbox Wireless Controller brings elegant design, refined comfort,
-      and instant sharing to a familiar favorite.
-    </p>
-    <p class="product__box__text">
-      The new Xbox Wireless Controller brings elegant design, refined comfort,
-      and instant sharing to a familiar favorite.
-    </p>
-    <p class="product__box__text">
-      The new Xbox Wireless Controller brings elegant design, refined comfort,
-      and instant sharing to a familiar favorite.
-    </p>
-    <p class="about__box__text">
-      The new Xbox Wireless Controller brings elegant design, refined comfort,
-      and instant sharing to a familiar favorite.
-    </p>
-    <p class="about__box__text">
-      The new Xbox Wireless Controller brings elegant design, refined comfort,
-      and instant sharing to a familiar favorite.
-    </p>
+
+    <section class="questions">
+      <div class="container">
+        <h2 class="questions__title">Frequently asked questions <span>control</span></h2>
+
+        <dl class="questions__list">
+          <dt class="active">When is Xbox Series X release date?</dt>
+          <dd class="active">
+            Xbox Series X is launching at participating retailers worldwide on November 10, 2020.
+          </dd>
+          <dt>Will my previous Xbox games work on Xbox Series X?</dt>
+          <dd>
+            The Xbox Series X are backward compatible with games from all of Microsoft's previous consoles, but not all
+            such titles.
+          </dd>
+          <dt>Which games include Smart Delivery?</dt>
+          <dd>
+            Whatever you can imagine!
+          </dd>
+        </dl>
+      </div>
+    </section>
   </main>
+
 
   <script type="module" src="script.js"></script>
 </body>

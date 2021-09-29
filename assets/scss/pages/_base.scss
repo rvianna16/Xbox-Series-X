@@ -1,16 +1,12 @@
-@use "../helpers/variables" as var;
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@use '../helpers/variables' as var;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 body {
   background-color: var.$black;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .container {
-  max-width: min(90vw, 1200px);
   margin: auto;
-}
-
-h1 {
-  color: white;
+  max-width: min(90vw, 1200px);
 }

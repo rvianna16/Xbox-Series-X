@@ -1,0 +1,64 @@
+@use '../helpers/variables' as var;
+@use '../helpers/mixins';
+
+#main {
+  .questions {
+    position: relative;
+    top: -5px;
+    background: #080808;
+    padding: 5rem 0;
+
+    &__title {
+      @include mixins.section-title;
+      width: 600px;
+    }
+
+    &__list {
+      padding: 5rem 0;
+      color: var.$white;
+
+      dt {
+        position: relative;
+        font-size: 1.5rem;
+        font-weight: 700;
+        cursor: pointer;
+        border-top: 2px solid #2e2e2e;
+        padding: 2rem 0;
+        padding-right: 70px;
+
+        &:first-child {
+          border: none;
+        }
+
+        &::after {
+          position: absolute;
+          top: 15px;
+          right: 0;
+          content: '';
+          display: block;
+          width: 60px;
+          height: 60px;
+          background: url(../img/icons/arrow-icon.png);
+          transform: rotate(-180deg);
+          transition: 0.5s;
+        }
+
+        &.active::after {
+          transform: rotate(0deg);
+          background: url(../img/icons/arrow-icon.png);
+        }
+      }
+
+      dd {
+        opacity: 0.6;
+        font-size: 1.5rem;
+        padding-bottom: 2rem;
+        display: none;
+
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+}
